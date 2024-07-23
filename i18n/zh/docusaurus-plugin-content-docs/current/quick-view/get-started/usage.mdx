@@ -164,7 +164,10 @@ import org.babyfish.jimmer.Page
 
 import com.example.model.*
 
-class BookRepository {
+class BookRepository(
+    // 这里需要构造函数注入KSqlClient
+    private val sqlClient: KSqlClient
+) {
 
     fun findBooks(
         
