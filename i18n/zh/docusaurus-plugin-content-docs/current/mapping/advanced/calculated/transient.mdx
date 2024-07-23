@@ -672,7 +672,7 @@ class BookStoreNewestBooksResolver(
                         table.name, 
                         table.edition
                     ) valueIn subQuery(Book::class) { ❷
-                        where(table.store.id valueIn storeIds) ❸
+                        where(table.store.id valueIn ids) ❸
                         groupBy(table.name) ❹
                         select(
                             table.name,
