@@ -260,8 +260,8 @@ Annotation processor会为每一个实体接口自动生成一个Fetcher类，�
                 // highlight-next-line
                 table.fetchBy {
                     // id是隐含的、强制的
-                    name
-                    edition
+                    name()
+                    edition()
                 }
             )
         }
@@ -317,8 +317,8 @@ Annotation processor会为每一个实体接口自动生成一个Fetcher类，�
             select(
                 // highlight-next-line
                 table.fetchBy {
-                    name
-                    price
+                    name()
+                    price()
                 }
             )
         }
@@ -376,10 +376,10 @@ Annotation processor会为每一个实体接口自动生成一个Fetcher类，�
             where(table.edition.eq(3))
             select(
                 table.fetchBy {
-                    name
+                    name()
                     // highlight-next-line
                     authors {
-                        firstName
+                        firstName()
                     }
                 }
             )
